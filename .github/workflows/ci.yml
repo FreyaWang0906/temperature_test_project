@@ -26,6 +26,7 @@ jobs:
 
     - name: Step 4 - Run tests with pytest
       run: |
+        export PYTHONPATH=$PYTHONPATH:./src
         pytest --junitxml=reports/test-results.xml
 
     - name: Step 5 - Upload report to GitHub
